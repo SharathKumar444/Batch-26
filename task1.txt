@@ -1,0 +1,115 @@
+SECTION A: Technical Questions
+
+1. What is the difference between var, let and const?
+var: Declares variable with function or global scope and allows re-declaration and updates within the same scope.
+let: Declares variable with block scope, allowing updates but not-redeclaration within the same block.
+const: Declares block scoped variables that cannot be reassigned after their initail assignment
+
+2. Which keyword allows redeclaration and why?
+ Answer: Var
+ Reason: Var is function-scoped, so redeclaring the same variable in the same scope is allowed.
+
+3. Which keyword allows reinitialization?
+ Answer: var and let
+ Reason: Both allow assigning a new value after declaration.
+
+4. Which keyword does not allow redeclaration and reinitialization?
+ Answer: const
+ Reason: A const variable must be assigned once and cannot be changed or redeclared 
+
+5. Why should const be used for fixed values?
+ Answer: Const prevents accidental reassignment, improves code safety, and makes the intent of fixed values clear.
+
+6. What error occurs when redeclaring a let variable?
+ Answer: SyntaxError: Identifier has already been declared
+
+7. What error occurs when reassigning a const variable?
+ Answer: TypeError: Assignment to constant variable
+
+8. Which keyword is preferred in modern JavaScript and why?
+ Answer: let and const
+ Reason: They provide block scope, avoid bugs caused by var and improve code readability and safety.
+
+9. Can const be declared without initialization? Explain.
+ Answer: No.
+ Reason: const must be assigned a value at the time of declaration.
+ Example :
+ const x; // Error
+
+10. When should var be avoided?
+ Answer:var should be avoided in modern JavaScript because it is function-scoped and can cause unexpected bugs 
+
+ Section-B: Code-Based Question
+
+ 11. Predict the output
+var a = 10;
+a = 20;
+var a = 30;
+console.log(a);
+Output: 30
+ Reason: Var allows redeclaration and reinitialization.
+
+12. Predict the output
+let b = 5;
+b = 15;
+console.log(b);
+ Output:15
+ Reason: let allows reinitialization but not redeclaration.
+
+13. Identify the error
+let x = 10;
+let x = 20;
+ Error: SyntaxError: Identifier 'x' has already been declared.
+ Reason: let does not allow redeclaration in the same scope.
+
+14. Identify the error
+const y = 50;
+y = 100;
+ Error: TypeError: Assignment to constant variable
+ Reason: const values cannot be reassigned.
+
+15. Write a program using var to show redeclaration.
+ Code:
+var a = 10;
+var a = 20;
+console.log(a);
+ Output:20
+
+16. Write a program using let to show reinitialization.
+let count = 5;
+count = 10;
+console.log(count);
+ Output: 10
+
+17. Write a program using const and explain why value cannot change.
+ const PI = 3.14;
+// PI = 3.1415; // Error
+console.log(PI);
+ Explanation: const prevents changing values once assigned.
+
+18. Convert var to let where applicable.
+// Before
+var age = 25;
+age = 26;
+// After
+let age = 25;
+age = 26;
+
+19. Convert var to const where applicable.
+// Before
+var country = "India";
+// After
+const country = "India";
+
+20. Write your own example for var, let, and const.
+ // var example
+var city = "Delhi";
+var city = "Mumbai";
+console.log(city);
+// let example
+let score = 50;
+score = 75;
+console.log(score);
+// const example
+const language = "JavaScript";
+console.log( language);
